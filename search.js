@@ -2,6 +2,14 @@
 //
 //
 
+const task_color = {
+  work: "blue",
+  personal: "green",
+  shopping: "purple",
+  work: "red",
+  other: "violet",
+};
+
 window.onload = () => {
   tasks = JSON.parse(localStorage.getItem("todos"));
   append_taks_list(tasks);
@@ -19,11 +27,11 @@ function createLielement(task) {
   // this function create li tag with taks information
   const node = document.createElement("li");
   node.innerHTML = `<div class="parent">
-                      <img src="asse/edit.png" class="edit in" />
-                      <div>
-                      <h3 class="in">${task.text}</h3>
-                      <p class="in bl">${task.desc}</p></div>
-                      <div class="cata"></div>
+                      <img src="asse/edit.png" class="edit_img_icon" />
+                      <div class="edit_div">
+                        <h3 class="edit_text">${task.text}</h3>
+                        <p class="edit_desc">${task.desc}</p></div>
+                      <div class="dot ${task_color[task.category]}"></div>
                       
                    </div>`;
   return node;

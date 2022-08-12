@@ -6,6 +6,7 @@ li {
   border-bottom: 1px solid rgb(222, 222, 222);
   margin-bottom: 10px;
   display: flex;
+  position: relative;
 }
 main {
   width: 350px;
@@ -63,24 +64,45 @@ li:hover {
   background-color: black;
   color: white;
 }
-.in {
-  display: inline;
-}
-.edit.in {
-  display: inline;
-}
-.bl {
-  display: block;
-  padding-left: 3.5rem;
+
+
+.edit_img_icon {
+  width: 25px;
+  height: 25px;
 }
 
-.cata {
-  width: 7px;
-  height: 7px;
-  right: 1;
-  top: 1;
-  background-color: rgb(22, 108, 32);
+
+.parent{
+  display: flex;
+
 }
+
+.edit_div{
+  width: 50%;
+  padding-left: 50px;
+
+}
+
+.edit_desc{
+  width: 10rem;
+  word-wrap: break-word;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  right: 1;
+  border-radius: 1rem;
+  top: 1;
+  right: 5px;
+  position:absolute;
+  
+}
+
+
+
+
+
 .btn {
   background-color: rgb(255, 255, 255);
   border: none;
@@ -88,4 +110,21 @@ li:hover {
 .img1 {
   width: 20px;
   height: 25px;
+}
+
+
+.red{
+  background-color: red;
+}
+.purple{
+  background-color: purple;
+}
+.green{
+  background-color: green;
+}
+.blue{
+  background-color: blue;
+}
+.violet{
+  background-color: violet;
 }
