@@ -61,3 +61,14 @@ function set_taks_result(list_of_match) {
   task_list.innerHTML = "";
   append_taks_list(list_of_match);
 }
+
+/////////////////////////////////////////////////////////////
+/////////////////// remove button ////////////////////
+////////////////////////////////////////////////////////////
+function remove_btn() {
+  console.log("test");
+  // main search method
+  // find match taks and send them into dom
+  const input = document.getElementById("search");
+  input.value = "";
+}
