@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="form4.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div class="container-task"></div>
+      <img src="asse/arrow-left.png" class="img1" />
+      <input type="text" class="txt" value="Add task" />
+      <div class="container-date">
+        <section class="date">
+          <h5>choose date</h5>
+          <p>29-july-1997</p>
+          <img src="asse/arrow-down.png" />
+        </section>
+        <section class="time">
+          <h5 class="h5t">choose time</h5>
+          <p>13-14</p>
+          <img src="asse/arrow-down.png" />
+        </section>
+      </div>
+      <div class="container-option">
+        <h3>choose task type</h3>
+
+
+            <label class="plan basic-plan one" for="work">
+              <input checked type="radio" id="work"  name="category"/>
+              <div class="plan-content">
+                <div class="plan-details">
+                  <p>Work</p>
+                </div>
+              </div>
+            </label>
+        
+            <label class="plan complete-plan two" for="personal">
+              <input type="radio" id="personal" name="category" />
+              <div class="plan-content">
+                <div class="plan-details">
+                  <p>Personal</p>
+                </div>
+              </div>
+            </label>
+
+            <label class="plan complete-plan three" for="shopping">
+              <input type="radio" id="shopping" name="category" />
+              <div class="plan-content">
+                <div class="plan-details">
+                  <p>Shopping</p>
+                </div>
+              </div>
+            </label>
+            <label class="plan complete-plan four" for="health">
+              <input type="radio" id="health" name="category" />
+              <div class="plan-content">
+                <div class="plan-details">
+                  <p>Health</p>
+                </div>
+              </div>
+            </label>
+            <label class="plan complete-plan five" for="other">
+              <input type="radio" id="other" name="category" />
+              <div class="plan-content">
+                <div class="plan-details">
+                  <p>Other</p>
+                </div>
+              </div>
+            </label>
+
+      </div>
+      <div class="container-descript">
+        <h4>write description</h4>
+        <input type="text" class="txt2" value="Description" />
+        <button class="btn2">submit</button>
+      </div>
+    </main>
+  </body>
+</html>
