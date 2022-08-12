@@ -65,25 +65,21 @@ li:hover {
   color: white;
 }
 
-
 .edit_img_icon {
   width: 25px;
   height: 25px;
 }
 
-
-.parent{
+.parent {
   display: flex;
-
 }
 
-.edit_div{
+.edit_div {
   width: 50%;
   padding-left: 50px;
-
 }
 
-.edit_desc{
+.edit_desc {
   width: 10rem;
   word-wrap: break-word;
 }
@@ -95,13 +91,8 @@ li:hover {
   border-radius: 1rem;
   top: 1;
   right: 5px;
-  position:absolute;
-  
+  position: absolute;
 }
-
-
-
-
 
 .btn {
   background-color: rgb(255, 255, 255);
@@ -112,19 +103,18 @@ li:hover {
   height: 25px;
 }
 
-
-.red{
+.red {
   background-color: red;
 }
-.purple{
+.purple {
   background-color: purple;
 }
-.green{
+.green {
   background-color: green;
 }
-.blue{
+.blue {
   background-color: blue;
 }
-.violet{
+.violet {
   background-color: violet;
 }
