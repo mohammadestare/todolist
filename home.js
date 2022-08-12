@@ -40,5 +40,34 @@ function createLielement(task) {
 </div>`;
   return node;
 }
+let psn = 0;
+let wrk = 0;
+let heth = 0;
+let shop = 0;
+for (let i = 0; i < task_left; i++) {
+  if (JSON.parse(localStorage.todos)[i].category == "shopping") {
+    shop++;
+  } else if (JSON.parse(localStorage.todos)[i].category == "work") {
+    wrk++;
+  } else if (JSON.parse(localStorage.todos)[i].category == "personal") {
+    psn++;
+  } else if (JSON.parse(localStorage.todos)[i].category == "health") {
+    heth++;
+  }
+}
+console.log(psn, wrk, shop, heth);
+
 let left_class = document.getElementById("left_class");
+let left_creat = document.getElementById("created");
+let left_work = document.getElementById("work");
+let left_shop = document.getElementById("shop");
+let left_pers = document.getElementById("personal");
+let left_heath = document.getElementById("heath");
+let left_today = document.getElementById("today");
 left_class.textContent = task_left;
+left_work.textContent = `${wrk} task`;
+left_shop.textContent = `${shop} task`;
+left_pers.textContent = `${psn} task`;
+left_heath.textContent = `${heth} task`;
+left_creat.textContent = task_left;
+left_today.textContent = `Today you have ${task_left} tasks`;
