@@ -1,7 +1,10 @@
 //
 //
 //
-
+const del = document.getElementsByTagName("li");
+del.addEventListener("click", function () {
+  del.classlist;
+});
 const task_color = {
   work: "blue",
   personal: "green",
