@@ -10,12 +10,12 @@
   <body>
     <main>
       <div class="container-task"></div>
-      <img src="asse/arrow-left.png" class="img1" />
+      <a href="home.html"><img src="asse/arrow-left.png" class="img1" /></a>
       <input type="text" class="txt" name="text" value="Add task" />
       <div class="container-date">
         <section class="date">
           <h5>choose date</h5>
-          <input type="date" class="txt" name="date"  value="2022-10-22" />
+          <input type="date" class="txt" name="date" value="2022-10-22" />
           <img src="asse/arrow-down.png" />
         </section>
         <section class="time">
@@ -27,55 +27,53 @@
       <div class="container-option">
         <h3>choose task type</h3>
 
+        <label class="plan basic-plan one" for="work">
+          <input checked type="radio" id="work" name="category" value="work" />
+          <div class="plan-content">
+            <div class="plan-details">
+              <p>Work</p>
+            </div>
+          </div>
+        </label>
 
-            <label class="plan basic-plan one" for="work">
-              <input checked type="radio" id="work"  name="category" value="work" />
-              <div class="plan-content">
-                <div class="plan-details">
-                  <p>Work</p>
-                </div>
-              </div>
-            </label>
-        
-            <label class="plan complete-plan two" for="personal">
-              <input type="radio" id="personal" name="category" value="personal" />
-              <div class="plan-content">
-                <div class="plan-details">
-                  <p>Personal</p>
-                </div>
-              </div>
-            </label>
+        <label class="plan complete-plan two" for="personal">
+          <input type="radio" id="personal" name="category" value="personal" />
+          <div class="plan-content">
+            <div class="plan-details">
+              <p>Personal</p>
+            </div>
+          </div>
+        </label>
 
-            <label class="plan complete-plan three" for="shopping">
-              <input type="radio" id="shopping" name="category"  value="shopping"/>
-              <div class="plan-content">
-                <div class="plan-details">
-                  <p>Shopping</p>
-                </div>
-              </div>
-            </label>
-            <label class="plan complete-plan four" for="health">
-              <input type="radio" id="health" name="category" value="health"/>
-              <div class="plan-content">
-                <div class="plan-details">
-                  <p>Health</p>
-                </div>
-              </div>
-            </label>
-            <label class="plan complete-plan five" for="other">
-              <input type="radio" id="other" name="category" value="other"/>
-              <div class="plan-content">
-                <div class="plan-details">
-                  <p>Other</p>
-                </div>
-              </div>
-            </label>
-
+        <label class="plan complete-plan three" for="shopping">
+          <input type="radio" id="shopping" name="category" value="shopping" />
+          <div class="plan-content">
+            <div class="plan-details">
+              <p>Shopping</p>
+            </div>
+          </div>
+        </label>
+        <label class="plan complete-plan four" for="health">
+          <input type="radio" id="health" name="category" value="health" />
+          <div class="plan-content">
+            <div class="plan-details">
+              <p>Health</p>
+            </div>
+          </div>
+        </label>
+        <label class="plan complete-plan five" for="other">
+          <input type="radio" id="other" name="category" value="other" />
+          <div class="plan-content">
+            <div class="plan-details">
+              <p>Other</p>
+            </div>
+          </div>
+        </label>
       </div>
       <div class="container-descript">
         <h4>write description</h4>
-        <input type="text" class="txt2" name="desc"  placeholder="description" />
-        <button class="btn2" onclick="submit_infos()" >submit</button>
+        <input type="text" class="txt2" name="desc" placeholder="description" />
+        <button class="btn2" onclick="submit_infos()">submit</button>
       </div>
     </main>
     <script src="create.js"></script>
