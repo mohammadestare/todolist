@@ -5,6 +5,7 @@ li {
   list-style: none;
   border-bottom: 1px solid rgb(222, 222, 222);
   margin-bottom: 10px;
+  display: flex;
 }
 main {
   width: 350px;
@@ -61,4 +62,22 @@ ul {
 li:hover {
   background-color: black;
   color: white;
+}
+.in {
+  display: inline;
+}
+.edit.in {
+  display: inline;
+}
+.bl {
+  display: block;
+  padding-left: 3.5rem;
+}
+
+.cata {
+  width: 7px;
+  height: 7px;
+  right: 1;
+  top: 1;
+  background-color: rgb(22, 108, 32);
 }
