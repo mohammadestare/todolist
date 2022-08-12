@@ -11,10 +11,13 @@
     <main>
       <section class="searchbar">
         <a href="home.html"><img src="asse/arrow-left.png" class="img1" /></a>
-        <img src="asse/close.png" class="close" />
+        <button class="remove_btn" onclick="remove_btn()">
+          <img src="asse/close.png" class="close" />
+        </button>
         <input type="text" class="search" id="search" placeholder="Search" />
-        <button id="serach_button" onclick="search_items()"> <img src="asse/search.png" id="searchicon" class="searchicon" /> </button>
-       
+        <button class="btn" id="serach_button" onclick="search_items()">
+          <img src="asse/search.png" id="searchicon" class="searchicon" />
+        </button>
       </section>
       <div class="searchlist">
         <ul id="task_list">

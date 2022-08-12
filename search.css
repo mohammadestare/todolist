@@ -23,16 +23,16 @@ ul {
   padding-left: 5px;
 }
 .searchbar {
-  margin-left: 20px;
+  margin-left: 10px;
   justify-content: center;
   width: 90%;
   padding-top: 20px;
-  padding-left: 20px;
+  padding-left: 10px;
   margin-bottom: 20px;
 }
 .close {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
 }
 .searchicon {
@@ -80,4 +80,12 @@ li:hover {
   right: 1;
   top: 1;
   background-color: rgb(22, 108, 32);
+}
+.btn {
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+.img1 {
+  width: 20px;
+  height: 25px;
 }
