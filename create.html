@@ -29,7 +29,7 @@
 
 
             <label class="plan basic-plan one" for="work">
-              <input checked type="radio" id="work"  name="category"/>
+              <input checked type="radio" id="work"  name="category" value="work" />
               <div class="plan-content">
                 <div class="plan-details">
                   <p>Work</p>
@@ -38,7 +38,7 @@
             </label>
         
             <label class="plan complete-plan two" for="personal">
-              <input type="radio" id="personal" name="category" />
+              <input type="radio" id="personal" name="category" value="personal" />
               <div class="plan-content">
                 <div class="plan-details">
                   <p>Personal</p>
@@ -47,7 +47,7 @@
             </label>
 
             <label class="plan complete-plan three" for="shopping">
-              <input type="radio" id="shopping" name="category" />
+              <input type="radio" id="shopping" name="category"  value="shopping"/>
               <div class="plan-content">
                 <div class="plan-details">
                   <p>Shopping</p>
@@ -55,7 +55,7 @@
               </div>
             </label>
             <label class="plan complete-plan four" for="health">
-              <input type="radio" id="health" name="category" />
+              <input type="radio" id="health" name="category" value="health"/>
               <div class="plan-content">
                 <div class="plan-details">
                   <p>Health</p>
@@ -63,7 +63,7 @@
               </div>
             </label>
             <label class="plan complete-plan five" for="other">
-              <input type="radio" id="other" name="category" />
+              <input type="radio" id="other" name="category" value="other"/>
               <div class="plan-content">
                 <div class="plan-details">
                   <p>Other</p>
@@ -75,8 +75,9 @@
       <div class="container-descript">
         <h4>write description</h4>
         <input type="text" class="txt2" name="desc"  placeholder="description" />
-        <button class="btn2">submit</button>
+        <button class="btn2" onclick="submit_infos()" >submit</button>
       </div>
     </main>
+    <script src="create.js"></script>
   </body>
 </html>
