@@ -105,6 +105,7 @@ button {
 h3,
 .p-task {
   margin: 0;
+  color: black;
 }
 .shape {
   background: linear-gradient(

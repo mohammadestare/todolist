@@ -3,16 +3,20 @@
 }
 main {
   height: 800px;
-  width: 400px;
+  width: 500px;
   margin: 0;
   background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
   border-radius: 10px;
   box-shadow: 0.5px 0.5px rgb(222, 221, 221);
 }
+.container-date {
+  margin-left: 10%;
+}
 .date {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+
   margin: 0;
 }
 
@@ -23,18 +27,22 @@ main {
   margin: 0;
 }
 .h5t {
-  justify-self: center;
+  justify-self: start;
+  color: gray;
 }
 .img1 {
-  padding-top: 20px;
+  padding-top: 2%;
+  padding-left: 5%;
+  margin-bottom: 5%;
   display: block;
-  width: 20px;
-  height: 30px;
+  width: 15px;
+  height: 20px;
 }
 .txt {
-  width: 70%;
+  width: 90%;
   border: none;
   color: gray;
+  grid-column: 1 / 2;
   font-size: xx-large;
 }
 p {
@@ -42,26 +50,33 @@ p {
   justify-self: center;
 }
 h5 {
-  justify-self: center;
+  justify-self: start;
+  color: gray;
+  font-size: large;
 }
 img {
-  width: 10px;
+  width: 15px;
   height: 10px;
+  align-self: center;
 }
 .container-option {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 25% 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   margin: 0;
   margin-bottom: 20px;
-  align-items: center;
-  justify-items: end;
+  padding-left: 10%;
+
+  justify-items: start;
   row-gap: 10px;
   column-gap: 1px;
 }
 h3 {
   grid-column: 1 / span 3;
-  justify-self: center;
+  justify-self: start;
+  padding-left: 10%;
+  color: gray;
+  font-size: x-large;
 }
 .container-descript {
   display: grid;
@@ -70,12 +85,13 @@ h3 {
   margin: 0;
   align-items: stretch;
 }
-.label {
+label {
   width: 100px;
   height: 50px;
   text-align: center;
   border-radius: 5px;
   margin: 0;
+  border-radius: 10px;
 }
 .one {
   background: linear-gradient(to right, rgb(43, 171, 214), rgb(35, 117, 152));
@@ -85,6 +101,7 @@ h3 {
 .two {
   background: linear-gradient(to right, rgb(53, 140, 111), rgb(21, 83, 21));
   justify-self: center;
+  width: 90%;
   box-shadow: 1px 1px rgb(212, 211, 211);
   color: rgb(215, 212, 212);
 }
@@ -102,12 +119,14 @@ h3 {
 }
 .five {
   background: linear-gradient(to right, rgb(129, 11, 159), rgb(117, 33, 169));
+  width: 90%;
   justify-self: center;
   box-shadow: 1px 1px rgb(212, 211, 211);
   color: rgb(230, 227, 227);
 }
 h4 {
   padding-left: 25px;
+  color: gray;
 }
 .txt2 {
   margin-left: 25px;
@@ -122,18 +141,21 @@ h4 {
   width: 80px;
   height: 40px;
   margin-left: 25px;
+  border-radius: 5px;
+  background-color: rgb(205, 205, 205);
+  color: rgb(255, 255, 255);
+  border: none;
 }
-
 
 input[type="radio"],
 input[type="checkbox"] {
-	display: none;
+  display: none;
 }
-
 
 .plan .plan-content:hover {
   -webkit-box-shadow: 0px 3px 5px 0px #e8e8e8;
   box-shadow: 0px 3px 5px 0px #e8e8e8;
+  justify-content: start;
 }
 
 .plan input[type="radio"]:checked + .plan-content:after {
@@ -147,7 +169,6 @@ input[type="checkbox"] {
   -webkit-box-shadow: 0px 0px 0px 2px #0066ff;
   box-shadow: 0px 0px 0px 2px #0066ff;
 }
-
 .plan input[type="radio"]:checked + .plan-content {
   border: 2px solid #216ee0;
 
@@ -155,7 +176,3 @@ input[type="checkbox"] {
   -o-transition: ease-in 0.3s;
   transition: ease-in 0.3s;
 }
-
-
-
- 

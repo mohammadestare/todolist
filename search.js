@@ -1,10 +1,7 @@
 //
 //
 //
-const del = document.getElementsByTagName("li");
-del.addEventListener("click", function () {
-  del.classlist;
-});
+
 const task_color = {
   work: "blue",
   personal: "green",
@@ -29,13 +26,22 @@ function append_taks_list(tasks) {
 function createLielement(task) {
   // this function create li tag with taks information
   const node = document.createElement("li");
-  node.innerHTML = `<div class="parent">
-                      <img src="asse/edit.png" class="edit_img_icon" />
+  node.innerHTML = `<div class="parent"   >
+                      <img src="asse/edit.png"   class="edit_img_icon" />
                       <div class="edit_div">
                         <h3 class="edit_text">${task.text}</h3>
                         <p class="edit_desc">${task.desc}</p></div>
-                      <div class="dot ${task_color[task.category]}"></div>
+                      <div class="dot ${
+                        task_color[task.category]
+                      }" Id="dot1"></div>
                       
+                     
+                   </div>
+                   <div class="del"> 
+                   
+                   <h5 class="del">Daily Ui challenge</h5>
+                   <p class="del"> create To-Do list app</p>
+                   
                    </div>`;
   return node;
 }
@@ -83,3 +89,11 @@ function remove_btn() {
   const input = document.getElementById("search");
   input.value = "";
 }
+
+let toop = document.getElementById("searchicon");
+let sel = document.querySelector(".del");
+let sol = document.querySelector(".parent");
+toop.addEventListener("click", function () {
+  sel.style.visibility = "visible";
+  sol.style.visibility = "hidden";
+});
