@@ -26,14 +26,14 @@ function append_taks_list(tasks) {
 function createLielement(task) {
   // this function create li tag with taks information
   const node = document.createElement("li");
-  node.innerHTML = `<div class="parent"   >
+  node.innerHTML = ` <div class="parent"   >
                       <img src="asse/edit.png"   class="edit_img_icon" />
                       <div class="edit_div">
                         <h3 class="edit_text">${task.text}</h3>
                         <p class="edit_desc">${task.desc}</p></div>
                       <div class="dot ${
                         task_color[task.category]
-                      }" Id="dot1"></div>
+                      }" Id="dot1"> <button class="trash" href="search.js" onclick="removeSpec()" ><img src="asse/trash.png" class="img2" /> </button></div>
                       
                      
                    </div>
@@ -42,7 +42,7 @@ function createLielement(task) {
                    <h5 class="del">Daily Ui challenge</h5>
                    <p class="del"> create To-Do list app</p>
                    
-                   </div>`;
+                   </div> `;
   return node;
 }
 
@@ -97,3 +97,8 @@ toop.addEventListener("click", function () {
   sel.style.visibility = "visible";
   sol.style.visibility = "hidden";
 });
+
+function removeSpec() {
+  var my_list = document.getElementById("task_list");
+  my_list.removeChild(my_list.childNodes[1]);
+}

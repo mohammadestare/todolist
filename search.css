@@ -6,7 +6,7 @@ li {
   border-bottom: 1px solid rgb(222, 222, 222);
   margin-bottom: 10px;
   display: flex;
-  position: relative;
+
   z-index: 2;
 }
 main {
@@ -23,6 +23,8 @@ main {
 }
 ul {
   padding-left: 5px;
+  position: relative;
+  z-index: 1;
 }
 .searchbar {
   margin-left: 10px;
@@ -60,10 +62,6 @@ ul {
   padding-left: 50px;
   color: gray;
   margin-bottom: 15px;
-}
-li:hover {
-  background-color: black;
-  color: white;
 }
 
 .edit_img_icon {
@@ -121,15 +119,30 @@ li:hover {
 .del {
   visibility: hidden;
 }
-.del:hover {
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(193, 114, 127);
+
+li:hover {
+  background-color: rgb(195, 60, 109);
+  position: relative;
+}
+li:hover p,
+li:hover h3,
+li:hover .edit_img_icon,
+li:hover .dot {
+  visibility: hidden;
+}
+li:hover .trash,
+li:hover .img2 {
   visibility: visible;
 }
-li:hover {
+li:hover .dot {
+  justify-self: center;
+  padding-right: 10%;
+}
+
+.trash,
+.img2 {
+  border: none;
+  background-color: rgb(156, 38, 38);
   visibility: hidden;
-  z-index: 1;
+  height: 50px;
 }
