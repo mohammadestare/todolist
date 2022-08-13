@@ -22,18 +22,18 @@ function append_taks_list(tasks) {
     task_list.appendChild(createLielement(task));
   });
 }
-
+let li_n = 0;
 function createLielement(task) {
   // this function create li tag with taks information
   const node = document.createElement("li");
-  node.innerHTML = ` <div class="parent"   >
+  node.innerHTML = `  <div class="parent" id="li_n${li_n}"  > ${li_n}
                       <img src="asse/edit.png"   class="edit_img_icon" />
-                      <div class="edit_div">
-                        <h3 class="edit_text">${task.text}</h3>
+                      <div class="edit_div edit">
+                        <h3 class="edit_text"  >${task.text}</h3>
                         <p class="edit_desc">${task.desc}</p></div>
                       <div class="dot ${
                         task_color[task.category]
-                      }" Id="dot1"> <button class="trash" href="search.js" onclick="removeSpec()" ><img src="asse/trash.png" class="img2" /> </button></div>
+                      }" Id="dot1"> <button value="55" id="num" class="trash" href="search.js" onclick="del()"  > <img src="asse/trash.png" class="img2"  /> </button></div>
                       
                      
                    </div>
@@ -43,6 +43,7 @@ function createLielement(task) {
                    <p class="del"> create To-Do list app</p>
                    
                    </div> `;
+  li_n += 1;
   return node;
 }
 
@@ -98,7 +99,26 @@ toop.addEventListener("click", function () {
   sol.style.visibility = "hidden";
 });
 
-function removeSpec() {
-  var my_list = document.getElementById("task_list");
-  my_list.removeChild(my_list.childNodes[1]);
+//function removeSpec() {
+// var myList =
+//   document.getElementById("task_list"); /* Var to reference the list */
+// var length = li_n;
+// var checker = "false"; /* boolean-ish value to determine if value was found */
+// var btn_t = document.getElementById("num");
+//btn_trash.onclick = console.log(btn_t);
+// for (var counter = 0; counter < length; counter++) {
+//   if (document.getElementById(`li_n${counter}`).textContent == counter) {
+//     alert("Counter : " + counter);
+//     myList.removeChild(myList.childNodes[counter]);
+//     checker = "true";
+//   }
+// }
+// if (checker == "false") {
+//   alert("Not Found");
+// }
+//}
+function del() {
+  let dol = document.getElementById("num");
+  let del = document.getElementById("task_list");
+  del.removeChild(del.childNodes[0]);
 }
