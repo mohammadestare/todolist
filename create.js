@@ -1,15 +1,20 @@
 // Saving to local storage:
+let count = 0;
 function savelocal(todo) {
   //Check: if item/s are there;
-  let todos;
-  if (localStorage.getItem("todos") === null) {
-    todos = [];
+  let todos = [];
+  if (localStorage.getItem(`todos${count}`) === null) {
+    todos[count] = [];
   } else {
-    todos = JSON.parse(localStorage.getItem("todos"));
+    todos[count] = JSON.parse(localStorage.getItem(`todos${count}`));
   }
-
-  todos.push(todo);
-  localStorage.setItem("todos", JSON.stringify(todos));
+  if (localStorage.length === 0) {
+    count = 0;
+  }
+  todos[count].push(todo);
+  localStorage.setItem(`todos${[count]}`, JSON.stringify(todos[count]));
+  count++;
+  return todos;
 }
 
 function submit_infos() {

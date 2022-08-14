@@ -1,7 +1,7 @@
 //
 //
 //
-
+let li_n = 0;
 const task_color = {
   work: "blue",
   personal: "green",
@@ -9,20 +9,29 @@ const task_color = {
   work: "red",
   other: "violet",
 };
+let i = 0;
 
 window.onload = () => {
-  tasks = JSON.parse(localStorage.getItem("todos"));
-  append_taks_list(tasks);
+  for (let j = 0; j < localStorage.length; j++) {
+    tasks = JSON.parse(localStorage.getItem(`todos${j}`));
+    append_taks_list(tasks);
+  }
 };
 
-function append_taks_list(tasks) {
-  // this function add task into ul element
-  const task_list = document.querySelector("#task_list");
-  tasks.forEach(function (task) {
-    task_list.appendChild(createLielement(task));
-  });
+while (i < localStorage.length - 1) {
+  console.log(i);
+
+  function append_taks_list(tasks) {
+    // this function add task into ul element
+    const task_list = document.querySelector("#task_list");
+    tasks.forEach((tasks) => {
+      task_list.appendChild(createLielement(tasks));
+      li_n += 1;
+    });
+  }
+  i++;
 }
-let li_n = 0;
+
 function createLielement(task) {
   // this function create li tag with taks information
   const node = document.createElement("li");
@@ -33,7 +42,7 @@ function createLielement(task) {
                         <p class="edit_desc">${task.desc}</p></div>
                       <div class="dot ${
                         task_color[task.category]
-                      }" Id="dot1"> <button value="55" id="num" class="trash" href="search.js" onclick="del()"  > <img src="asse/trash.png" class="img2"  /> </button></div>
+                      }" Id="dot1"> <button value="${li_n}" id="num${li_n}" class="trash" href="search.js" onclick="del(${li_n})"  > <img src="asse/trash.png" class="img2"  /> </button></div>
                       
                      
                    </div>
@@ -43,7 +52,7 @@ function createLielement(task) {
                    <p class="del"> create To-Do list app</p>
                    
                    </div> `;
-  li_n += 1;
+
   return node;
 }
 
@@ -62,7 +71,7 @@ function search_items() {
 
 function find_taks(value) {
   // this function only find match values of taks
-  tasks = JSON.parse(localStorage.getItem("todos"));
+  tasks = JSON.parse(localStorage.getItem(`todos${i}`));
   if (!value) {
     return tasks;
   }
@@ -117,8 +126,16 @@ toop.addEventListener("click", function () {
 //   alert("Not Found");
 // }
 //}
-function del() {
-  let dol = document.getElementById("num");
-  let del = document.getElementById("task_list");
-  del.removeChild(del.childNodes[0]);
+function del(value) {
+  let dol;
+  dol = document.getElementById(`num${value}`);
+  myList = document.getElementById(`task_list`);
+  let del = document.getElementById(`li_n${value}`);
+  console.log(dol.value - 1, li_n);
+  del.parentElement.remove();
+  //localStorage.removeItem(localStorage.key(value));
+  JSON.parse(localStorage.removeItem(`todos${value - 1}`));
+  // --i;
+  // return;
 }
+li_n++;

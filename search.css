@@ -100,7 +100,7 @@ ul {
 }
 .img1 {
   width: 20px;
-  height: 25px;
+  height: 22px;
 }
 
 .red {
@@ -148,4 +148,8 @@ li:hover .dot {
   background-color: rgb(156, 38, 38);
   visibility: hidden;
   height: 50px;
+}
+.remove_btn {
+  background: none;
+  border: none;
 }
