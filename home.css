@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Dosis|Quicksand");
-
+/*@import url("https://fonts.googleapis.com/css?family=Dosis|Quicksand");
+*/
 * {
   margin-left: 0px;
   font-family: Dosis;
@@ -136,8 +136,8 @@ ul {
 li {
   margin-bottom: 5px;
 
-  display: inline-block;
-
+  display: flex;
+  background-color: aqua;
   position: relative;
   z-index: 1;
 }

@@ -95,7 +95,12 @@ ul {
   position: absolute;
 }
 .btn {
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(
+    to right,
+    rgb(251, 250, 250),
+    rgb(255, 250, 250),
+    rgb(254, 251, 251)
+  );
   border: none;
 }
 .img1 {
@@ -136,10 +141,12 @@ li:hover .dot {
 li:hover .trash,
 li:hover .img2 {
   visibility: visible;
+  height: 65px;
 }
 li:hover .dot {
-  justify-self: center;
-  padding-right: 10%;
+  justify-self: start;
+  justify-items: start;
+  padding-right: 15%;
 }
 
 .trash,
@@ -152,4 +159,12 @@ li:hover .dot {
 .remove_btn {
   background: none;
   border: none;
+}
+.search {
+  background: linear-gradient(
+    to right,
+    rgb(251, 250, 250),
+    rgb(255, 250, 250),
+    rgb(254, 251, 251)
+  );
 }

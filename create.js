@@ -2,19 +2,16 @@
 let count = 0;
 function savelocal(todo) {
   //Check: if item/s are there;
-  let todos = [];
-  if (localStorage.getItem(`todos${count}`) === null) {
-    todos[count] = [];
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = {};
   } else {
-    todos[count] = JSON.parse(localStorage.getItem(`todos${count}`));
+    todos = JSON.parse(localStorage.getItem("todos"));
   }
-  if (localStorage.length === 0) {
-    count = 0;
-  }
-  todos[count].push(todo);
-  localStorage.setItem(`todos${[count]}`, JSON.stringify(todos[count]));
-  count++;
-  return todos;
+  index = (parseInt(Object.keys(todos).at(-1)) || 0) + 1;
+  console.log(index);
+  todos[index] = todo;
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
 
 function submit_infos() {
@@ -29,3 +26,10 @@ function submit_infos() {
   console.log(information);
   savelocal(information);
 }
+
+// {
+//   1:{'',''},
+//   2:{'',''},
+//   3:{'',''},
+
+// }
