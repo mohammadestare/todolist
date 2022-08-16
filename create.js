@@ -9,6 +9,7 @@ function savelocal(todo) {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
   index = (parseInt(Object.keys(todos).at(-1)) || 0) + 1;
+
   console.log(index);
   todos[index] = todo;
   localStorage.setItem("todos", JSON.stringify(todos));
@@ -26,10 +27,3 @@ function submit_infos() {
   console.log(information);
   savelocal(information);
 }
-
-// {
-//   1:{'',''},
-//   2:{'',''},
-//   3:{'',''},
-
-// }

@@ -6,7 +6,7 @@ const task_color = {
   work: "blue",
   personal: "green",
   shopping: "purple",
-  work: "red",
+  health: "red",
   other: "violet",
 };
 
