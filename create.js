@@ -1,7 +1,6 @@
 // Saving to local storage:
 let count = 0;
 function savelocal(todo) {
-  //Check: if item/s are there;
   let todos;
   if (localStorage.getItem("todos") === null) {
     todos = {};
@@ -17,11 +16,13 @@ function savelocal(todo) {
 
 function submit_infos() {
   const inputs = document.querySelectorAll("input");
+
   information = {};
   inputs.forEach(function (input) {
     if (input.type === "radio" && input.checked === false) {
       return;
     }
+
     information[input.name] = input.value;
   });
   console.log(information);

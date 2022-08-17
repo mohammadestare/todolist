@@ -1,7 +1,3 @@
-//
-//
-//
-
 const task_color = {
   work: "blue",
   personal: "green",
@@ -16,7 +12,6 @@ window.onload = () => {
 };
 
 function append_taks_list(tasks) {
-  // this function add task into ul element
   const task_list = document.querySelector("#task_list");
   for (let index in tasks) {
     task_list.appendChild(createLielement(index, tasks[index]));
@@ -24,7 +19,6 @@ function append_taks_list(tasks) {
 }
 
 function createLielement(index, task) {
-  // this function create li tag with taks information
   const node = document.createElement("li");
   node.innerHTML = `  <div class="parent" id="${index}">  
                       <img src="asse/edit.png"   class="edit_img_icon" /> 
@@ -46,28 +40,20 @@ function createLielement(index, task) {
   return node;
 }
 
-/////////////////////////////////////////////////////////////
-/////////////////// SEARCH METHOD        ////////////////////
-////////////////////////////////////////////////////////////
-
 function search_items() {
-  // main search method
-  // find match taks and send them into dom
   const input = document.getElementById("search");
-  const value = input.value; // test
+  const value = input.value;
   list_of_match = find_tasks(value);
   set_taks_result(list_of_match);
 }
 
 function find_tasks(value) {
-  // this function only find match values of taks
   let filter_task = {};
   tasks = JSON.parse(localStorage.getItem("todos"));
   if (!value) {
     return tasks;
   }
   for (let key in tasks) {
-    //1,2,3
     if (tasks[key].text.includes(value)) {
       filter_task[key] = tasks[key];
     }
@@ -76,19 +62,13 @@ function find_tasks(value) {
 }
 
 function set_taks_result(list_of_match) {
-  // this function just send the match items into dom
   const task_list = document.querySelector("#task_list");
-  // we clear innerhtml to remove last items
+
   task_list.innerHTML = "";
   append_taks_list(list_of_match);
 }
 
-/////////////////////////////////////////////////////////////
-/////////////////// remove button ////////////////////
-////////////////////////////////////////////////////////////
 function remove_btn() {
-  // main search method
-  // find match taks and send them into dom
   const input = document.getElementById("search");
   input.value = "";
   location.reload();
@@ -101,9 +81,6 @@ function delete_task(index) {
   location.reload();
 }
 
-/////////////////////////////////////////////////////////////
-/////////////////// hover logic ////////////////////
-////////////////////////////////////////////////////////////
 let toop = document.getElementById("searchicon");
 let sel = document.querySelector(".del");
 let sol = document.querySelector(".parent");

@@ -1,6 +1,3 @@
-//
-//
-
 const task_color = {
   work: "blue",
   personal: "green",
@@ -33,7 +30,6 @@ function get_static_number(taks_list) {
 }
 
 function append_taks_list(tasks) {
-  // this function add task into ul element
   const task_list = document.querySelector("#task_list");
   for (let index in tasks) {
     task_list.appendChild(createLielement(index, tasks[index]));
@@ -41,23 +37,42 @@ function append_taks_list(tasks) {
 }
 
 function createLielement(index, task) {
-  // this function create li tag with taks information
   const node = document.createElement("li");
-  node.innerHTML = `  
+  node.classList.add("fol");
+  if (task.text === "Add task") {
+    const node1 = document.createElement("li");
+    node1.classList.add("lid");
+    node1.innerHTML = `  
     <div class="time">
           ${task.time}
     </div>
+    
+      
+          <hr class="hrd">
+      
+      `;
+
+    return node1;
+  } else {
+    node.innerHTML = `  
+    <div class="time">
+          ${task.time}
+    </div>
+    <hr>
       <div class="parent" id="index"> 
           <div class="edit_div edit">
             <h3 class="edit_text"  >${task.text}</h3>
             <p class="edit_desc">${task.desc}</p>
           </div>
-          <div class="dot ${task_color[task.category]}" Id="dot1">  
+          <div class="dot ${task_color[task.category]} " Id="dot1">  
           </div>
-          <div class="time">${task.time}
-          </div>
-      </div>`;
-  return node;
+      </div>
+      
+      <div class="time_out">
+          ${task.time_out}
+          </div>`;
+    return node;
+  }
 }
 
 function set_value_into_element(statics) {

@@ -4,16 +4,18 @@
   margin-left: 0px;
   font-family: Dosis;
 }
-body,
-main {
+body {
+  position: relative;
+}
+.main {
   margin-left: 30px;
   box-shadow: 3px 4px rgb(255, 255, 255);
-  width: auto;
+  width: 60%;
 }
 .title {
   align-self: center;
   justify-self: center;
-  padding-left: 40px;
+  padding-left: 20px;
   margin-left: 20px;
 }
 .member,
@@ -131,15 +133,22 @@ ul {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+
+  position: relative;
 }
 li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  grid-template-columns: 15% 85%;
+  display: grid;
 
-  display: flex;
-  background-color: aqua;
+  grid-row: 5%;
+  border-radius: 30%;
   position: relative;
-  z-index: 1;
+  z-index: 0;
+}
+.lid {
+  height: 10px;
 }
 .check-btn {
   width: 90%;
@@ -152,12 +161,7 @@ li {
   padding-left: 10px;
   padding-top: 15px;
 }
-hr {
-  display: inline;
-  z-index: 2;
-  width: 80%;
-  float: right;
-}
+
 .active {
   background-color: rgb(6, 142, 210);
 }
@@ -166,4 +170,62 @@ hr {
 }
 btnu {
   background-color: aqua;
+}
+
+.time {
+  background: none;
+}
+hr {
+  position: absolute;
+  width: 80%;
+  right: 5;
+  top: 5;
+  z-index: 1;
+  margin-left: 20%;
+}
+.parent {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding-top: 3%;
+  padding-left: 3%;
+  position: relative;
+
+  box-shadow: 1px 1px rgb(48, 47, 47);
+  z-index: 3;
+}
+.time_out {
+  padding-bottom: 10px;
+}
+.dot {
+  position: absolute;
+  background-color: blueviolet;
+  width: 3%;
+  height: 10%;
+  border-radius: 50px;
+  right: 6px;
+  top: 4px;
+  z-index: 4;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.purple {
+  background-color: purple;
+}
+.violet {
+  background-color: violet;
+}
+.red {
+  background-color: rgb(255, 0, 43);
+}
+.parent:nth-last-of-type(2):hover {
+  background-color: rgb(26, 157, 201);
+}
+.a1 {
+  position: absolute;
+  right: 10;
+  top: 20;
 }

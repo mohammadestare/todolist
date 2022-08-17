@@ -161,18 +161,11 @@ input[type="checkbox"] {
 .plan input[type="radio"]:checked + .plan-content:after {
   content: "";
   position: absolute;
-  height: 8px;
+  height: 5px;
   width: 8px;
   background: #216fe0;
   right: 20px;
   top: 20px;
   -webkit-box-shadow: 0px 0px 0px 2px #0066ff;
   box-shadow: 0px 0px 0px 2px #0066ff;
-}
-.plan input[type="radio"]:checked + .plan-content {
-  border: 2px solid #216ee0;
-
-  -webkit-transition: ease-in 0.3s;
-  -o-transition: ease-in 0.3s;
-  transition: ease-in 0.3s;
 }
